@@ -1,0 +1,580 @@
+/* #pikkulogo {
+  position: fixed;
+  top: 25px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+} */
+
+/* #mobiilinavi {
+  overflow: hidden;
+  padding-top: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+} */ 
+
+
+
+body {
+    background-color: #fff9f0;
+    background-image: url('iisi_background2.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.taustakuva {
+    width: 600px;
+    height: 300px;
+}
+
+
+
+/*Desktop menu*/
+.sivunavi {
+  position: absolute;
+  display: inline-block;
+  padding-top: 30px;
+  left: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+a {
+  display: inline-block;
+  top: 0;
+  overflow: hidden;
+  padding-left: 50px;
+  text-decoration: none;
+  color: #024023; 
+}
+
+a:hover {
+  color: #93B491;
+}
+
+
+
+/*Mobiilimenu*/
+.dropdown {
+  position: sticky;
+  left: 500px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.dropdown-label {
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  width: 5%;
+  text-align: center;
+}
+
+.dropdown-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.dropdown-menu li {
+  margin-right: 10px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #024023;
+}
+
+.dropdown-menu li a:active {
+  color: #93B491;
+}
+
+.dropdown-toggle:checked + .dropdown-label + .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-toggle {
+  display: none;
+}
+
+
+
+/*Ländäri*/
+#tee {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #37372F;
+  text-align: left;
+}
+
+#tulossapian {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #37372F;
+  text-align: left;
+}
+
+#kerronappi {
+  display: inline-block;
+  padding: 15px 30px 15px 30px;
+  margin-left: 20px;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  border: 2px solid #024023;
+  border-radius: 15px;
+  color: #024023;
+}
+
+#kerronappi:hover {
+  color: #93B491;
+  border-color: #93B491;
+  text-align: center;
+  align-items: center;
+}
+
+#kerronappi:active {
+  padding: 12.5px 25px 12.5px 25px;
+}
+
+#kerroteksti {
+  padding-bottom: 100px;
+}
+
+
+
+/*Sisältö*/
+h3 {
+  padding-top: 50px;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #37372F;
+  text-align: center;
+}
+
+p {
+    padding: 0 25px 25px 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #37372F;
+    text-align: center;
+}
+
+#yhteys {
+  margin-bottom: 50px;
+}
+
+
+
+/*Mobiiliasetukset*/
+@media only screen and (min-width: 320px) {
+  #logo {
+    width: 50%;
+    height: 50%;
+    margin-top: 50px;
+  }
+
+  #pikkulogo_mobiili {
+    visibility: hidden;
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: sticky;
+    top: 10px;
+    left: 0;
+    
+  }
+
+  #pikkulogo_tabletti {
+    visibility: hidden;
+    display: none;
+    width: 0px;
+    height: 0px;
+    top: 10px;
+    left: 0;
+  }
+
+  #pikkulogo_desktop {
+    visibility: hidden;
+    display: none;
+    width: 0px;
+    height: 0px;
+    top: 10px;
+    left: 0;
+  }
+
+  body {
+    background-image: url('kuvio.png');
+    background-size: cover;
+  }
+
+  .sivunavi {
+    display: none;
+    visibility: hidden; 
+  }
+
+  .somepalikat {
+    display: flex;
+    justify-content: space-around;      
+    gap: 20px;
+  }
+
+  .somepalikat section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .somepalikat img {
+    width: 80px;
+  }
+
+  .somepalikat p {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+  }
+
+ }
+
+/*Tablettiasetukset*/
+@media only screen and (min-width: 430px) {
+    #logo {
+      width: 70%;
+      height: 70%;
+    }
+
+    #pikkulogo_mobiili {
+      visibility: hidden;
+    }
+  
+    #pikkulogo_tabletti {
+      width: 50px;
+      height: 50px;
+      position: fixed;
+      top: 10px;
+      right: 20px;
+    }
+  
+    #pikkulogo_desktop {
+      visibility: hidden;
+    }
+
+    body {
+      background-image: url('kuvio.png');
+      background-size: contain;
+    }
+
+    .sivunavi {
+    display: none;
+    }
+
+    #yhteys {
+      padding-bottom: 25px;
+    }
+
+    .somepalikat {
+      display: flex;
+      justify-content: space-around;      
+      gap: 20px;
+    }
+  
+    .somepalikat section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .somepalikat #miukumauku {
+      width: 80px;
+    }
+  
+    .somepalikat #ig {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+  
+    .somepalikat p {
+      margin: 10px 0 0 0;
+      font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 834px) {
+  #logo {
+    width: 60%;
+    height: 60%;
+    padding-top: 100px;
+  }
+
+  #pikkulogo_mobiili {
+    visibility: hidden;
+  }
+
+  #pikkulogo_tabletti {
+    visibility: visible;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    padding-right: 20px;
+  }
+
+  #pikkulogo_desktop {
+    visibility: hidden;
+  }
+
+  body {
+      background-image: url('kuvio.png');
+      background-size: cover;
+    }
+
+  .sivunavi {
+    display: none;
+  }
+
+  #yhteys {
+    padding-bottom: 25px;
+  }
+
+  .somepalikat {
+    display: flex;
+    justify-content: space-around;      
+    gap: 20px;
+  }
+
+  .somepalikat section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .somepalikat #miukumauku {
+    width: 80px;
+  }
+
+  .somepalikat #ig {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+
+  .somepalikat p {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+  }
+ }
+
+/*Koneasetukset*/
+@media only screen and (min-width: 834px) {
+  #pikkulogo_mobiili {
+    visibility: hidden;
+    display: none;
+  }
+
+  #pikkulogo_tabletti {
+    visibility: hidden;
+    display: none;
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+  #logo {
+    width: 68%;
+    height: 68%;
+    padding-top: 100px;
+  }
+
+  .sivunavi {
+    visibility: visible;
+    display: inline;
+    padding-left: 25px;
+  }
+
+  #pikkulogo_desktop {
+    visibility: visible;
+    position: fixed;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-left: 15px;
+  }
+
+
+  body {
+      background-image: url('iisi_background2.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+  .somepalikat {
+      display: flex;
+      justify-content: space-around;      
+      gap: 0;
+  }
+
+  .somepalikat section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 0 100px 100px;
+  }
+
+  .somepalikat img {
+      width: 80px;
+      height: 60px;
+  }
+
+  .somepalikat #ig {
+      width: 60px;
+  }
+  
+  .somepalikat p {
+      margin: 10px 0 0 0;
+      font-size: 16px;
+  }
+
+}
+
+
+
+/* alla on kaikki fontit */
+.unbounded-secondary {
+  font-family: "Unbounded", system-ui;
+  /*font-optical-sizing: auto;*/
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-thin {
+  font-family: "Poppins", system-ui;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", system-ui;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", system-ui;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", system-ui;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", system-ui;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", system-ui;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", system-ui;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", system-ui;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", system-ui;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", system-ui;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", system-ui;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", system-ui;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", system-ui;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", system-ui;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", system-ui;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", system-ui;
+  font-weight: 900;
+  font-style: italic;
+}
+
